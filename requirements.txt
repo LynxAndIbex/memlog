@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-streamlit
-openai-whisper
-=======
 gradio
 whisper
 torch
->>>>>>> 881cb16 (Add Gradio Whisper app)
