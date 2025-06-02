@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import streamlit as st
 import whisper
 import os
@@ -23,3 +24,24 @@ if uploaded_file is not None:
     st.write(result["text"])
 
     os.remove(temp_audio_path)
+=======
+import gradio as gr
+import whisper
+
+model = whisper.load_model("base")
+
+def transcribe(audio):
+    # audio is a tuple: (sample_rate, np.array)
+    result = model.transcribe(audio[0])
+    return result["text"]
+
+iface = gr.Interface(
+    fn=transcribe,
+    inputs=gr.Audio(source="upload", type="filepath"),
+    outputs="text",
+    title="Whisper Audio Transcriber",
+    description="Upload an audio file to transcribe it using OpenAI Whisper."
+)
+
+iface.launch()
+>>>>>>> 881cb16 (Add Gradio Whisper app)
