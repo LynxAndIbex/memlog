@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import streamlit as st
 import whisper
 import os
@@ -44,4 +44,4 @@ iface = gr.Interface(
 )
 
 iface.launch()
->>>>>>> 881cb16 (Add Gradio Whisper app)
+
