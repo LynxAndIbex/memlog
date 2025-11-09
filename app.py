@@ -24,7 +24,7 @@ if uploaded_file is not None:
     st.write(result["text"])
 
     os.remove(temp_audio_path)
-=======
+
 import gradio as gr
 import whisper
 
